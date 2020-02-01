@@ -31,4 +31,13 @@ public class FizzBuzzTest {
 
         assertEquals("Buzz", result);
     }
+
+    @Test
+    public void shouldReturnWhizzWhenNumberIsMultiplierOf7() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(49);
+
+        assertEquals("Whizz", result);
+    }
 }
