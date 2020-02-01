@@ -22,4 +22,13 @@ public class FizzBuzzTest {
 
         assertEquals("Fizz", result);
     }
+
+    @Test
+    public void shouldReturnBuzzWhenNumberIsMultiplierOf5() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(25);
+
+        assertEquals("Buzz", result);
+    }
 }
