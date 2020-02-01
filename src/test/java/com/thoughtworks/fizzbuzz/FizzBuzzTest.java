@@ -76,4 +76,22 @@ public class FizzBuzzTest {
 
         assertEquals("FizzBuzzWhizz", result);
     }
+
+    @Test
+    public void shouldReturnFizzWhenNumberContains3() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(13);
+
+        assertEquals("Fizz", result);
+    }
+
+    @Test
+    public void shouldReturnFizzWhenNumberContains3AndIsMultiplierOf5Or7() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(630);
+
+        assertEquals("Fizz", result);
+    }
 }
