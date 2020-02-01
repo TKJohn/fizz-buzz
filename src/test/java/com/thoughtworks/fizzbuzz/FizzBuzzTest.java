@@ -58,4 +58,13 @@ public class FizzBuzzTest {
 
         assertEquals("FizzWhizz", result);
     }
+
+    @Test
+    public void shouldReturnBuzzWhizzWhenNumberIsMultiplierOf5And7() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(70);
+
+        assertEquals("BuzzWhizz", result);
+    }
 }
