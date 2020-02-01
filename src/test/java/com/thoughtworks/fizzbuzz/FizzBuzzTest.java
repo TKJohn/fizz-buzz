@@ -63,7 +63,7 @@ public class FizzBuzzTest {
     public void shouldReturnBuzzWhizzWhenNumberIsMultiplierOf5And7() {
         final FizzBuzz fizzBuzz = new FizzBuzz();
 
-        final String result = fizzBuzz.fizzBuzz(70);
+        final String result = fizzBuzz.fizzBuzz(140);
 
         assertEquals("BuzzWhizz", result);
     }
@@ -120,5 +120,33 @@ public class FizzBuzzTest {
         final String result = fizzBuzz.fizzBuzz(35);
 
         assertEquals("Buzz", result);
+    }
+
+
+    @Test
+    public void shouldReturnWhizzWhenNumberContains7() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(17);
+
+        assertEquals("Whizz", result);
+    }
+
+    @Test
+    public void shouldReturnWhizzWhenNumberContains7AndIsMultiplierOf3Or5() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(270);
+
+        assertEquals("Whizz", result);
+    }
+
+    @Test
+    public void shouldReturnWhizzWhenNumberContains7AndContains3Or5() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(357);
+
+        assertEquals("Whizz", result);
     }
 }

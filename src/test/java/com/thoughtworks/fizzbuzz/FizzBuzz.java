@@ -15,11 +15,13 @@ public class FizzBuzz {
     public String fizzBuzz(final int i) {
         final ContainsPredictor contains3 = new ContainsPredictor(3);
         final ContainsPredictor contains5 = new ContainsPredictor(5);
+        final ContainsPredictor contains7 = new ContainsPredictor(7);
 
         final MultiplierPredictor multiplierOf3 = new MultiplierPredictor(3);
         final MultiplierPredictor multiplierOf5 = new MultiplierPredictor(5);
         final MultiplierPredictor multiplierOf7 = new MultiplierPredictor(7);
 
+        if (contains7.test(i)) return WHIZZ;
         if (contains5.test(i)) return BUZZ;
         if (contains3.test(i)) return FIZZ;
 
