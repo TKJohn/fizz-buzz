@@ -8,6 +8,7 @@ public class FizzBuzz {
         final MultiplierPredictor multiplierOf5 = new MultiplierPredictor(5);
         final MultiplierPredictor multiplierOf7 = new MultiplierPredictor(7);
 
+        if (multiplierOf3.and(multiplierOf5).and(multiplierOf7).test(i)) return "FizzBuzzWhizz";
         if (multiplierOf3.and(multiplierOf5).test(i)) return "FizzBuzz";
         if (multiplierOf3.and(multiplierOf7).test(i)) return "FizzWhizz";
         if (multiplierOf5.and(multiplierOf7).test(i)) return "BuzzWhizz";
