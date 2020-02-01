@@ -13,4 +13,13 @@ public class FizzBuzzTest {
 
         assertEquals("4", result);
     }
+
+    @Test
+    public void shouldReturnFizzWhenNumberIsMultiplierOf3() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(12);
+
+        assertEquals("Fizz", result);
+    }
 }
