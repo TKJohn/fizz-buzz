@@ -49,4 +49,13 @@ public class FizzBuzzTest {
 
         assertEquals("FizzBuzz", result);
     }
+
+    @Test
+    public void shouldReturnFizzWhizzWhenNumberIsMultiplierOf3And7() {
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+
+        final String result = fizzBuzz.fizzBuzz(42);
+
+        assertEquals("FizzWhizz", result);
+    }
 }
