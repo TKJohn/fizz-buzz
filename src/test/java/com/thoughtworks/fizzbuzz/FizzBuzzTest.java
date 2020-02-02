@@ -89,4 +89,32 @@ public class FizzBuzzTest {
         String result = FizzBuzz.fizzBuzz(input);
         assertEquals("BuzzWhizz", result);
     }
+
+    @Test
+    public void shouldNotReturnBuzzGivenMultipleOf5WhenInputContains7() {
+        Integer input = 70;
+        String result = FizzBuzz.fizzBuzz(input);
+        assertEquals("Whizz", result);
+    }
+
+    @Test
+    public void shouldReturnFizzGivenMultipleOf3WhenInputContains7() {
+        Integer input = 75;
+        String result = FizzBuzz.fizzBuzz(input);
+        assertEquals("Fizz", result);
+    }
+
+    @Test
+    public void shouldReturnFizzGivenInputContains3WhenInputContains7() {
+        Integer input = 753;
+        String result = FizzBuzz.fizzBuzz(input);
+        assertEquals("Fizz", result);
+    }
+
+    @Test
+    public void shouldReturnFizzWhizzGivenMultipleOf3And5And7WhenInputContains7() {
+        Integer input = 1470;
+        String result = FizzBuzz.fizzBuzz(input);
+        assertEquals("FizzWhizz", result);
+    }
 }
