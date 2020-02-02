@@ -50,7 +50,7 @@ public class FizzBuzzTest {
 
     @Test
     public void shouldReturnBuzzWhizzGivenMultiplierOf5And7() {
-        Integer input = 35;
+        Integer input = 140;
         String result = FizzBuzz.fizzBuzz(input);
         assertEquals("BuzzWhizz", result);
     }
@@ -60,5 +60,19 @@ public class FizzBuzzTest {
         Integer input = 105;
         String result = FizzBuzz.fizzBuzz(input);
         assertEquals("FizzBuzzWhizz", result);
+    }
+
+    @Test
+    public void shouldReturnFizzGivenInputContains3() {
+        Integer input = 31;
+        String result = FizzBuzz.fizzBuzz(input);
+        assertEquals("Fizz", result);
+    }
+
+    @Test
+    public void shouldReturnFizzGivenMultiplierOf5Or7Contains3() {
+        Integer input = 630;
+        String result = FizzBuzz.fizzBuzz(input);
+        assertEquals("Fizz", result);
     }
 }
