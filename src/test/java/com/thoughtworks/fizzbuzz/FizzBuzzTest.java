@@ -36,7 +36,7 @@ public class FizzBuzzTest {
 
     @Test
     public void shouldReturnFizzBuzzGivenMultiplierOf3And5() {
-        Integer input = 15;
+        Integer input = 60;
         String result = FizzBuzz.fizzBuzz(input);
         assertEquals("FizzBuzz", result);
     }
@@ -57,7 +57,7 @@ public class FizzBuzzTest {
 
     @Test
     public void shouldReturnFizzBuzzWhizzGivenMultiplierOf3And5And7() {
-        Integer input = 105;
+        Integer input = 210;
         String result = FizzBuzz.fizzBuzz(input);
         assertEquals("FizzBuzzWhizz", result);
     }
@@ -74,5 +74,19 @@ public class FizzBuzzTest {
         Integer input = 630;
         String result = FizzBuzz.fizzBuzz(input);
         assertEquals("Fizz", result);
+    }
+
+    @Test
+    public void shouldNotReturnFizzGivenMultipleOf3WhenInputContains5() {
+        Integer input = 15;
+        String result = FizzBuzz.fizzBuzz(input);
+        assertEquals("Buzz", result);
+    }
+
+    @Test
+    public void shouldNotReturnFizzGivenInputContains3WhenInputContains5() {
+        Integer input = 35;
+        String result = FizzBuzz.fizzBuzz(input);
+        assertEquals("BuzzWhizz", result);
     }
 }
