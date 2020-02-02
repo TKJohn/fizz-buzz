@@ -12,14 +12,15 @@ public class FizzBuzz {
     private static final String BUZZ_WHIZZ = BUZZ + WHIZZ;
     private static final String FIZZ_BUZZ_WHIZZ = FIZZ + BUZZ + WHIZZ;
 
-    public String fizzBuzz(final int i) {
-        final ContainsPredictor contains3 = new ContainsPredictor(3);
-        final ContainsPredictor contains5 = new ContainsPredictor(5);
-        final ContainsPredictor contains7 = new ContainsPredictor(7);
+    private static final ContainsPredictor contains3 = new ContainsPredictor(3);
+    private static final ContainsPredictor contains5 = new ContainsPredictor(5);
+    private static final ContainsPredictor contains7 = new ContainsPredictor(7);
 
-        final MultiplierPredictor multiplierOf3 = new MultiplierPredictor(3);
-        final MultiplierPredictor multiplierOf5 = new MultiplierPredictor(5);
-        final MultiplierPredictor multiplierOf7 = new MultiplierPredictor(7);
+    private static final MultiplierPredictor multiplierOf3 = new MultiplierPredictor(3);
+    private static final MultiplierPredictor multiplierOf5 = new MultiplierPredictor(5);
+    private static final MultiplierPredictor multiplierOf7 = new MultiplierPredictor(7);
+
+    public String fizzBuzz(final int i) {
 
         if (contains7.test(i)) return WHIZZ;
         if (contains5.test(i)) return BUZZ;
