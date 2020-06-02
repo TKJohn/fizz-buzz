@@ -19,7 +19,8 @@ public class FizzBuzz {
     }
 
     private static String handleNoContains(final Integer input) {
-        if (isMultiplierOf3(input) && isMultiplierOf5(input) && isMultiplierOf7(input)) return FIZZ_BUZZ_WHIZZ;
+        if (isMultiplierOf3(input) && isMultiplierOf5(input) && isMultiplierOf7(input))
+            return FIZZ_BUZZ_WHIZZ;
 
         if (isMultiplierOf3(input) && isMultiplierOf5(input)) return FIZZ_BUZZ;
         if (isMultiplierOf3(input) && isMultiplierOf7(input)) return FIZZ_WHIZZ;
